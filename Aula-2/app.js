@@ -69,16 +69,22 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                         NÂO -> NOT -> !
                         */ 
 
+                    // validação da entrada vazia
                     if(nomeAluno == '' || valor1 == '' || valor2 == '' || valor3 == '' || valor4 == '') {
                         console.log('ERRO: é obrigatório o preenchimento de todos os dados!!!')
+                        // vaçidação de números de 0 a 100
                     }else if(valor1 < 0 && valor1 >100 ||
                          valor2 < 0 && valor2 >100 ||
                           valor3 < 0 && valor3 > 100 ||
                            valor4 < 0 && valor4 > 100 ){
                             console.log('Os números devem ser de 0 a 100!!!')
-                           
-                           }else{
-                                
+                           // validação para a entrada de letras nas notas
+                           // isNAN() -> permite validar se o conteúdo da variável tem algum caracter em vez de número
+                           }else if(isNaN(nota1) || isNaN(nota2) || isNaN(nota3) || isNaN(nota4)){
+                                console.log('ERRO: não é possível calcular as médias das notas com a entrada de letras!!!')
+                             }else if(!isNaN(nomeAluno)){
+                                console.log('ERRO: não é permitido letras no nome de aluno!!!')
+                             }else{
                                 let soma = Number(valor1) + Number(valor2) + Number(valor3) + Number(valor4)
                                 let media = Number(soma) / 4
                                 console.log()
@@ -86,10 +92,15 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                                 console.log('O nome do aluno é: ' + nomeAluno)
                                 console.log('As notas foram: ' + nota1 +','+ nota2 + ',' + nota3 + ',' + nota4)
                                 console.log('A media foi: ' + media)
-                                console.log('------------------------')
-
-                           }
-                           
+                                console.log('Média necessária: 50')  
+                               
+  
+                                if(media < 50 ){
+                                    console.log('Reprovado')
+                                } else {console.log('Aprovado')}
+                                console.log('------------------------')  
+                             }
+                             
                 })
             })
         })
