@@ -80,7 +80,15 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                             console.log('Os números devem ser de 0 a 100!!!')
                            // validação para a entrada de letras nas notas
                            // isNAN() -> permite validar se o conteúdo da variável tem algum caracter em vez de número
-                           }else if(isNaN(nota1) || isNaN(nota2) || isNaN(nota3) || isNaN(nota4)){
+                           /*
+                           parseINT() -> permite converter uma String para número INTEIRO
+                           parseFLOAT() -> permite converter uma String para número decimal
+                           Number() -> Permite converter uma string para número (inteiro ou decimal)
+                           String() -. Permite converter um contepudo para string
+                           Boolean() -> permite converter um conteúdo para booleano
+                           Typeof() -> permite verificar o tipo de dados de uma variável
+                           */ 
+                           }else if(isNaN(valor1) || isNaN(valor2) || isNaN(valor3) || isNaN(valor4)){
                                 console.log('ERRO: não é possível calcular as médias das notas com a entrada de letras!!!')
                              }else if(!isNaN(nomeAluno)){
                                 console.log('ERRO: não é permitido letras no nome de aluno!!!')
@@ -92,16 +100,21 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                                 console.log('O nome do aluno é: ' + nomeAluno)
                                 console.log('As notas foram: ' + nota1 +','+ nota2 + ',' + nota3 + ',' + nota4)
                                 console.log('A media foi: ' + media)
-                                console.log('Média necessária: 50')  
                                
   
                                 if(media < 50 ){
                                     console.log('Reprovado')
-                                } else {console.log('Aprovado')}
-                                console.log('------------------------')  
+                                }else if (media > 49 & media < 70){
+                                    console.log('Em recuperação')
+                                }
+                                
+                            else{
+                                console.log('Aprovado')
+                                
                              }
+                             console.log('------------------------')  
                              
-                })
+                }})
             })
         })
     })
