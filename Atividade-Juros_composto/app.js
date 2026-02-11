@@ -49,7 +49,6 @@ entradaDeDados.question('Favor digitar seu nome: ', function(nomeUsuario){
                         //Contas para calcular o valor final
                         let taxaConvertida = Number(taxaJuros)/100 + 1 
                         const valorTotal = Number(valorDaCompra) * Number(taxaConvertida) ** Number(tempoMeses)
-                        console.log(Number(taxaConvertida) + ',' + Number(valorDaCompra) + ',' + Number(tempoMeses))
                         let valorParcela = valorTotal / tempoMeses
                         let acrescimo = valorTotal - valorDaCompra
                         
@@ -86,7 +85,7 @@ entradaDeDados.question('Favor digitar seu nome: ', function(nomeUsuario){
                             \n O valor total será de R$ ${valorTotal.toFixed(2)}
                             \n
                             \nMuito obrigado por escolher a Viva Moda
-                            \n-----------------------------------------------------------------------------`)
+                            \n-----------------------------------------------------------------`)
                             
               
 

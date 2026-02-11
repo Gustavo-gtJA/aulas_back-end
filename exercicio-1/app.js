@@ -5,9 +5,9 @@ var entradaDeDados = readline.createInterface({
     output: process.stdout
 })
 
-entradaDeDados.question('digite o valor do primeiro número: ', function(numero1){
-    entradaDeDados.question('digite o valor do segundo número: ', function(numero2){
-        entradaDeDados.question('digite o valor do terceiro número: ', function(numero3){
+entradaDeDados.question('Digite o valor do primeiro número: ', function(numero1){
+    entradaDeDados.question('Digite o valor do segundo número: ', function(numero2){
+        entradaDeDados.question('Digite o valor do terceiro número: ', function(numero3){
 
             var soma = Number(numero1) + Number(numero2) + Number(numero3)
             

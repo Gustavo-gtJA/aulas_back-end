@@ -91,7 +91,7 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                            }else if(isNaN(valor1) || isNaN(valor2) || isNaN(valor3) || isNaN(valor4)){
                                 console.log('ERRO: não é possível calcular as médias das notas com a entrada de letras!!!')
                              }else if(!isNaN(nomeAluno)){
-                                console.log('ERRO: não é permitido letras no nome de aluno!!!')
+                                console.log('ERRO: não é numeros letras no nome de aluno!!!')
                              }else{
                                 let soma = Number(valor1) + Number(valor2) + Number(valor3) + Number(valor4)
                                 let media = Number(soma) / 4
@@ -99,7 +99,7 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                             
                                 console.log('------------------------ '+
                                     'O nome do aluno é:' + nomeAluno  +
-                                     'As notas foram: ' + nota1 +','+ nota2 + ',' + nota3 + ',' + nota4 + 
+                                     'As notas foram: ' + nota1 +','+ nota2 + ',' + nota3 + ',' + nota4 +
                                       'A media foi: ' + media )
 
                                 if(media < 50 ){

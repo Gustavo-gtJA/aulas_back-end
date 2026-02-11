@@ -1,4 +1,4 @@
-//comentário e, linja
+//comentário em linha
 /*
 comentario
    em
@@ -30,7 +30,7 @@ var entradaDeDados = readline.createInterface({
     O método question após a digitação chama sua função "CALL BACK"
      para entregar oque foi digitado no terminal, atráves do argumento
       nomedeUsuario*/
-entradaDeDados.question('favor digitar seu nome: ', function(nomeUsuario){
+entradaDeDados.question('Favor digitar seu nome: ', function(nomeUsuario){
     //Entrada de dados para o email
     entradaDeDados.question('Favor digirte seu email: ', function(emailUsuario){
         
